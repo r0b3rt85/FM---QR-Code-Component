@@ -1,6 +1,6 @@
 # Frontend Mentor - QR code component solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). 
 
 ## Table of contents
 
@@ -17,21 +17,15 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+This is my initial solution to the QR Code component. The initial time given to the code was a day. This is because I am new to coding and thought that a lot of code would need to be researched. Luckily this was not the case and I was able to complete the solution in about 2 hours.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![My Solution](./images/SOLUTION%20-%20fm-qr-code-component.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+Above is a screenshot of the live website with the completed solution.
 
 ### Links
 
@@ -40,66 +34,72 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+There were a couple of stages that I tried to complete this solution, they are:
+
+1. Create a GIT repository for the files to be saved and later published.
+2. Import the design files into Figma to help with the sizing (padding, radius, sizing, etc...)
+3. Define my CSS variables by using the style guide as a reference.
+4. Go back and forth with the CSS definitions and nesting HTML content to show a useable structure. 
+5. Commit the final code to my Git repository and publish on Vercel. 
+6. Write the README.md with the steps I took.
+
 ### Built with
 
-- Semantic HTML5 markup
+- HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+  - Flexbox
+  - Media queries
+  - Variable definitions
+- Desktop-first workflow
+- [Figma](https://figma.com/) - Design and sizing
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) - For CSS reference
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+When I was creating the solution to this challenge I really wanted to try and include CSS variables. This is something that I wanted to learn more about and impliment in one of my projects.
 
-To see how you can add code snippets, see below:
+Below is the initial code needed to define the variables in your CSS file.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root{
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+Once the variable has been defined it can easily be used anywhere in your CSS file. This allows you to assign arbitrary values to a property with an author-chosen name, and the `var()` function. 
+
+`:root` declares a custom property named `--white` on the root element, and assigns to it the value `hsl(0, 0%, 100%)`. This property is then inherited to the elements in the rest of the document. Its value can be referenced with the `var()` function:
+
+```css
+.card{  /* card style */
+  width: 325px;
+  height: 500px;
+
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  padding: 16px;
 }
 ```
+I found that the variables are both case sensitive and font format specific as well. This is a creat solution and can be accessed in `@media` queries as well.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Further tweeks can be made to the code to make it more friendly on mobile devices. And some interactions when you hover over it might be nice (subtle 3D card effect).
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) - This helped me understand how variables can be defined and used within CSS files. I really liked using this technique to define my main styles in an easy format.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Under Construction]()
+- Frontend Mentor - [@r0b3rt85](https://www.frontendmentor.io/profile/r0b3rt85)
+- GitHub - [@r0b3rt85](https://github.com/r0b3rt85)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thank you to Frontend Mentors for providing an extensive range of resources to help new developers access projects based around web development.
